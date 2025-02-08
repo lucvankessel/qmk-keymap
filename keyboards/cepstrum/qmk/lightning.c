@@ -133,7 +133,9 @@ bool HSV_matrix_indicators_user(void) {
             set_layer_color(2);
             break;
         default:
-            HSV_matrix_set_color_all(____);
+             if (rgb_matrix_get_flags() == LED_FLAG_NONE)
+                rgb_matrix_set_color_all(0, 0, 0);
+            break;
     }
     return true;
 }
