@@ -31,80 +31,103 @@ const uint16_t PROGMEM ledmaps[][RGB_MATRIX_LED_COUNT][4] = {
     // default layer
     [_DEFAULT] = {
         // backlight
-        {0, ____},{1, ____},{2, ____},{3, ____},{4, ____},{5, ____}, {38, ____}, 45, ____}, {48, ____}, {51, ____}, {54, ____}, {57, ____}, {87, ____}, {90, ____}, {93, ____}, {96, ____},
-        
+        {0, ____},{1, ____},{2, ____},{3, ____},{4, ____},{5, ____}, {38, ____}, {45, ____}, {48, ____}, {51, ____}, {54, ____}, {57, ____}, {87, ____}, {90, ____}, {93, ____}, {96, ____},
+
         // keys
-        {6, WHITE}, {7, WHITE}, {8, WHITE}, {9, WHITE}, {10, WHITE}, {11, WHITE}, {12, WHITE}, {13, WHITE}, {14, WHITE},        {15, WHITE}, {16, WHITE}, {17, WHITE}, {18, WHITE}, {19, WHITE}, {20, WHITE}, {21, WHITE}, {22, WHITE},
-        
-        {23, WHITE}, {24, WHITE}, {25, WHITE}, {26, WHITE}, {27, WHITE}, {28, WHITE}, {29, WHITE}, {30, WHITE},                 {31, WHITE}, {32, WHITE}, {33, WHITE}, {34, WHITE}, {35, WHITE}, {36, WHITE}, {37, WHITE}, {39, WHITE}, {40, WHITE},
-        
-        {41, WHITE}, {42, WHITE}, {43, WHITE}, {44, WHITE}, {46, WHITE}, {47, WHITE}, {49, WHITE}, {50, WHITE},                 {52, WHITE}, {53, WHITE}, {55, WHITE}, {56, WHITE}, {58, WHITE}, {59, WHITE}, {60, WHITE}, {61, WHITE},
-        
-        {62, WHITE}, {63, WHITE}, {64, WHITE}, {65, WHITE}, {66, WHITE}, {67, WHITE}, {68, WHITE}, {69, WHITE},                 {70, WHITE}, {71, WHITE}, {72, WHITE}, {73, WHITE}, {74, WHITE}, {75, WHITE}, {76, WHITE}, {77, WHITE},
-        
-        {78, WHITE}, {79, WHITE}, {80, WHITE}, {81, WHITE}, {82, WHITE}, {83, WHITE}, {84, WHITE},                              {85, WHITE}, {86, WHITE}, {88, WHITE}, {89, WHITE}, {91, WHITE}, {92, WHITE}, {94, WHITE},
-        
+        {6, WITE}, {7, WITE}, {8, WITE}, {9, WITE}, {10, WITE}, {11, WITE}, {12, WITE}, {13, WITE}, {14, WITE},        {15, WITE}, {16, WITE}, {17, WITE}, {18, WITE}, {19, WITE}, {20, WITE}, {21, WITE}, {22, WITE},
+
+        {23, WITE}, {24, WITE}, {25, WITE}, {26, WITE}, {27, WITE}, {28, WITE}, {29, WITE}, {30, WITE},                 {31, WITE}, {32, WITE}, {33, WITE}, {34, WITE}, {35, WITE}, {36, WITE}, {37, WITE}, {39, WITE}, {40, WITE},
+
+        {41, WITE}, {42, WITE}, {43, WITE}, {44, WITE}, {46, WITE}, {47, WITE}, {49, WITE}, {50, WITE},                 {52, WITE}, {53, WITE}, {55, WITE}, {56, WITE}, {58, WITE}, {59, WITE}, {60, WITE}, {61, WITE},
+
+        {62, WITE}, {63, WITE}, {64, WITE}, {65, WITE}, {66, WITE}, {67, WITE}, {68, WITE}, {69, WITE},                 {70, WITE}, {71, WITE}, {72, WITE}, {73, WITE}, {74, WITE}, {75, WITE}, {76, WITE}, {77, WITE},
+
+        {78, WITE}, {79, WITE}, {80, WITE}, {81, WITE}, {82, WITE}, {83, WITE}, {84, WITE},                              {85, WITE}, {86, WITE}, {88, WITE}, {89, WITE}, {91, WITE}, {92, WITE}, {94, WITE}
+
     },
 
 
     // nav layer
     [_NAV] = {
         // backlight
-        {0, ____},{1, ____},{2, ____},{3, ____},{4, ____},{5, ____}, {38, ____}, 45, ____}, {48, ____}, {51, ____}, {54, ____}, {57, ____}, {87, ____}, {90, ____}, {93, ____}, {96, ____},
-        
+        {0, ____},{1, ____},{2, ____},{3, ____},{4, ____},{5, ____}, {38, ____}, {45, ____}, {48, ____}, {51, ____}, {54, ____}, {57, ____}, {87, ____}, {90, ____}, {93, ____}, {96, ____},
+
         // keys
-        {6, WHITE}, {7, WHITE}, {8, WHITE}, {9, WHITE}, {10, WHITE}, {11, WHITE}, {12, WHITE}, {13, WHITE}, {14, WHITE},        {15, WHITE}, {16, WHITE}, {17, WHITE}, {18, WHITE}, {19, WHITE}, {20, WHITE}, {21, WHITE}, {22, WHITE},
-        
-        {23, WHITE}, {24, WHITE}, {25, WHITE}, {26, WHITE}, {27, WHITE}, {28, WHITE}, {29, WHITE}, {30, WHITE},                 {31, WHITE}, {32, WHITE}, {33, WHITE}, {34, WHITE}, {35, WHITE}, {36, WHITE}, {37, WHITE}, {39, WHITE}, {40, WHITE},
-        
-        {41, WHITE}, {42, WHITE}, {43, WHITE}, {44, WHITE}, {46, WHITE}, {47, WHITE}, {49, WHITE}, {50, WHITE},                 {52, WHITE}, {53, WHITE}, {55, WHITE}, {56, WHITE}, {58, WHITE}, {59, WHITE}, {60, WHITE}, {61, WHITE},
-        
-        {62, WHITE}, {63, WHITE}, {64, WHITE}, {65, WHITE}, {66, WHITE}, {67, WHITE}, {68, WHITE}, {69, WHITE},                 {70, WHITE}, {71, WHITE}, {72, WHITE}, {73, WHITE}, {74, WHITE}, {75, WHITE}, {76, WHITE}, {77, WHITE},
-        
-        {78, WHITE}, {79, WHITE}, {80, WHITE}, {81, WHITE}, {82, WHITE}, {83, WHITE}, {84, WHITE},                              {85, WHITE}, {86, WHITE}, {88, WHITE}, {89, WHITE}, {91, WHITE}, {92, WHITE}, {94, WHITE},
-        
+        {6, WITE}, {7, WITE}, {8, WITE}, {9, WITE}, {10, WITE}, {11, WITE}, {12, WITE}, {13, WITE}, {14, WITE},        {15, WITE}, {16, WITE}, {17, WITE}, {18, WITE}, {19, WITE}, {20, WITE}, {21, WITE}, {22, WITE},
+
+        {23, WITE}, {24, WITE}, {25, WITE}, {26, WITE}, {27, WITE}, {28, WITE}, {29, WITE}, {30, WITE},                 {31, WITE}, {32, WITE}, {33, WITE}, {34, WITE}, {35, WITE}, {36, WITE}, {37, WITE}, {39, WITE}, {40, WITE},
+
+        {41, WITE}, {42, WITE}, {43, WITE}, {44, WITE}, {46, WITE}, {47, WITE}, {49, WITE}, {50, WITE},                 {52, WITE}, {53, WITE}, {55, WITE}, {56, WITE}, {58, WITE}, {59, WITE}, {60, WITE}, {61, WITE},
+
+        {62, WITE}, {63, WITE}, {64, WITE}, {65, WITE}, {66, WITE}, {67, WITE}, {68, WITE}, {69, WITE},                 {70, WITE}, {71, WITE}, {72, WITE}, {73, WITE}, {74, WITE}, {75, WITE}, {76, WITE}, {77, WITE},
+
+        {78, WITE}, {79, WITE}, {80, WITE}, {81, WITE}, {82, WITE}, {83, WITE}, {84, WITE},                              {85, WITE}, {86, WITE}, {88, WITE}, {89, WITE}, {91, WITE}, {92, WITE}, {94, WITE}
+
     },
 
     // symbol layer
     [_SYMBOLS] = {
         // backlight
-        {0, ____},{1, ____},{2, ____},{3, ____},{4, ____},{5, ____}, {38, ____}, 45, ____}, {48, ____}, {51, ____}, {54, ____}, {57, ____}, {87, ____}, {90, ____}, {93, ____}, {96, ____},
-        
+        {0, ____},{1, ____},{2, ____},{3, ____},{4, ____},{5, ____}, {38, ____}, {45, ____}, {48, ____}, {51, ____}, {54, ____}, {57, ____}, {87, ____}, {90, ____}, {93, ____}, {96, ____},
+
         // keys
-        {6, WHITE}, {7, WHITE}, {8, WHITE}, {9, WHITE}, {10, WHITE}, {11, WHITE}, {12, WHITE}, {13, WHITE}, {14, WHITE},        {15, WHITE}, {16, WHITE}, {17, WHITE}, {18, WHITE}, {19, WHITE}, {20, WHITE}, {21, WHITE}, {22, WHITE},
-        
-        {23, WHITE}, {24, WHITE}, {25, WHITE}, {26, WHITE}, {27, WHITE}, {28, WHITE}, {29, WHITE}, {30, WHITE},                 {31, WHITE}, {32, WHITE}, {33, WHITE}, {34, WHITE}, {35, WHITE}, {36, WHITE}, {37, WHITE}, {39, WHITE}, {40, WHITE},
-        
-        {41, WHITE}, {42, WHITE}, {43, WHITE}, {44, WHITE}, {46, WHITE}, {47, WHITE}, {49, WHITE}, {50, WHITE},                 {52, WHITE}, {53, WHITE}, {55, WHITE}, {56, WHITE}, {58, WHITE}, {59, WHITE}, {60, WHITE}, {61, WHITE},
-        
-        {62, WHITE}, {63, WHITE}, {64, WHITE}, {65, WHITE}, {66, WHITE}, {67, WHITE}, {68, WHITE}, {69, WHITE},                 {70, WHITE}, {71, WHITE}, {72, WHITE}, {73, WHITE}, {74, WHITE}, {75, WHITE}, {76, WHITE}, {77, WHITE},
-        
-        {78, WHITE}, {79, WHITE}, {80, WHITE}, {81, WHITE}, {82, WHITE}, {83, WHITE}, {84, WHITE},                              {85, WHITE}, {86, WHITE}, {88, WHITE}, {89, WHITE}, {91, WHITE}, {92, WHITE}, {94, WHITE},
-        
+        {6, WITE}, {7, WITE}, {8, WITE}, {9, WITE}, {10, WITE}, {11, WITE}, {12, WITE}, {13, WITE}, {14, WITE},        {15, WITE}, {16, WITE}, {17, WITE}, {18, WITE}, {19, WITE}, {20, WITE}, {21, WITE}, {22, WITE},
+
+        {23, WITE}, {24, WITE}, {25, WITE}, {26, WITE}, {27, WITE}, {28, WITE}, {29, WITE}, {30, WITE},                 {31, WITE}, {32, WITE}, {33, WITE}, {34, WITE}, {35, WITE}, {36, WITE}, {37, WITE}, {39, WITE}, {40, WITE},
+
+        {41, WITE}, {42, WITE}, {43, WITE}, {44, WITE}, {46, WITE}, {47, WITE}, {49, WITE}, {50, WITE},                 {52, WITE}, {53, WITE}, {55, WITE}, {56, WITE}, {58, WITE}, {59, WITE}, {60, WITE}, {61, WITE},
+
+        {62, WITE}, {63, WITE}, {64, WITE}, {65, WITE}, {66, WITE}, {67, WITE}, {68, WITE}, {69, WITE},                 {70, WITE}, {71, WITE}, {72, WITE}, {73, WITE}, {74, WITE}, {75, WITE}, {76, WITE}, {77, WITE},
+
+        {78, WITE}, {79, WITE}, {80, WITE}, {81, WITE}, {82, WITE}, {83, WITE}, {84, WITE},                              {85, WITE}, {86, WITE}, {88, WITE}, {89, WITE}, {91, WITE}, {92, WITE}, {94, WITE}
+
     }
 
-}
+};
+
+// uint16_t* find_value_by_index(int layer, int index) {
+//     uint16_t* array = malloc(sizeof(uint16_t) * 4);
+
+//     for (int i = 0; i < RGB_MATRIX_LED_COUNT; i ++) {
+//         if (pgm_read_byte(&ledmaps[layer][i][0]) == index) {
+//             for (int j = 0; j<4; j++) {
+//                 array[j] = pgm_read_byte(&ledmaps[layer][i][j]);
+//             }
+//             break;
+//         }
+//     }
+//     return array;
+// }
 
 uint16_t* find_value_by_index(int layer, int index) {
-    uint16_t* array = malloc(sizeof(uint16_t) * 4);
+    static uint16_t array[4];  // Use static array to avoid memory allocation issues
 
-    for (int = 0; i < RGB_MATRIX_LED_COUNT; i ++) {
-        if (pgm_read_byte(&ledmaps[layer][i][0]) == index) {
-            for (int j = 0; j<4; j++) {
-                array[j] = pgm_read_byte(&ledmaps[layer][i][j]);
+    for (int i = 0; i < RGB_MATRIX_LED_COUNT; i++) {
+        if (pgm_read_word(&ledmaps[layer][i][0]) == index) {  // Use pgm_read_word
+            for (int j = 0; j < 4; j++) {
+                array[j] = pgm_read_word(&ledmaps[layer][i][j]);  // Read as word
             }
-            break;
+            return array;
         }
     }
-    return array;
+    return NULL;  // Return NULL if index not found
 }
+
+// void set_layer_color(int layer) {
+//     for(int i = 0; i < RGB_MATRIX_LED_COUNT; i++) {
+//         uint16_t* ledmap_value = find_value_by_index(layer, i);
+//         rgb_matrix_set_color(i, ledmap_value[1], ledmap_value[2], ledmap_value[3]);
+
+//         free(ledmap_value);
+//     }
+// }
 
 void set_layer_color(int layer) {
     for(int i = 0; i < RGB_MATRIX_LED_COUNT; i++) {
-        uint16_t* ledmap_value = find_value_by_index(layer, i)
-        rgb_matrix_set_color(i, ledmap_value[1], ledmap_value[2], ledmap_value[3]);
-    
-        free(ledmap_value);
+        uint16_t* ledmap_value = find_value_by_index(layer, i);
+        if (ledmap_value) {  // Check for NULL
+            rgb_matrix_set_color(i, ledmap_value[1], ledmap_value[2], ledmap_value[3]);
+        }
     }
 }
 
