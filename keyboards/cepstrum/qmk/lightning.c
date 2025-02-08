@@ -32,7 +32,7 @@ const uint16_t PROGMEM ledmaps[][RGB_MATRIX_LED_COUNT][4] = {
     [_DEFAULT] = {
         // backlight
         {0, ____},{1, ____},{2, ____},{3, ____},{4, ____},{5, ____}, {38, ____}, {45, ____}, {48, ____}, {51, ____}, {54, ____}, {57, ____}, {86, ____}, {90, ____}, {92, ____}, {96, ____},
-
+        // 31 = links control
         // keys
         {6, WITE}, {7, WITE}, {8, WITE}, {9, WITE}, {10, WITE}, {11, WITE}, {12, WITE}, {13, WITE}, {14, WITE},        {15, WITE}, {16, WITE}, {17, WITE}, {18, WITE}, {19, WITE}, {20, WITE}, {21, WITE}, {22, WITE},
 
