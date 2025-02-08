@@ -31,7 +31,7 @@ const uint16_t PROGMEM ledmaps[][RGB_MATRIX_LED_COUNT][4] = {
     // default layer
     [_DEFAULT] = {
         // backlight
-        {0, ____},{1, ____},{2, ____},{3, ____},{4, ____},{5, ____}, {38, ____}, {45, ____}, {48, ____}, {51, ____}, {54, ____}, {57, ____}, {87, ____}, {90, ____}, {93, ____}, {96, ____},
+        {0, ____},{1, ____},{2, ____},{3, ____},{4, ____},{5, ____}, {38, ____}, {45, ____}, {48, ____}, {51, ____}, {54, ____}, {57, ____}, {87, ____}, {90, ____}, {92, ____}, {96, ____},
 
         // keys
         {6, WITE}, {7, WITE}, {8, WITE}, {9, WITE}, {10, WITE}, {11, WITE}, {12, WITE}, {13, WITE}, {14, WITE},        {15, WITE}, {16, WITE}, {17, WITE}, {18, WITE}, {19, WITE}, {20, WITE}, {21, WITE}, {22, WITE},
@@ -61,7 +61,7 @@ const uint16_t PROGMEM ledmaps[][RGB_MATRIX_LED_COUNT][4] = {
 
         {62, TEAL}, {63, TEAL}, {64, TEAL}, {65, TEAL}, {66, TEAL}, {67, TEAL}, {68, TEAL}, {69, TEAL},                 {70, TEAL}, {71, TEAL}, {72, TEAL}, {73, TEAL}, {74, TEAL}, {75, TEAL}, {76, TEAL}, {77, TEAL},
 
-        {78, TEAL}, {79, TEAL}, {80, TEAL}, {81, TEAL}, {82, TEAL}, {83, TEAL}, {84, TEAL},                              {85, TEAL}, {86, TEAL}, {88, TEAL}, {89, TEAL}, {91, TEAL}, {92, TEAL}, {94, TEAL}
+        {78, TEAL}, {79, TEAL}, {80, TEAL}, {81, TEAL}, {82, TEAL}, {83, TEAL}, {84, TEAL},                              {85, TEAL}, {86, TEAL}, {88, TEAL}, {89, TEAL}, {91, TEAL}, {93, TEAL}, {94, TEAL}
 
     },
 
