@@ -23,7 +23,7 @@ extern HSV_config_t HSV_matrix_config;
 #define WITE    HSV_WHITE
 #define YELW    HSV_YELLOW
 
-const uint16_t PROGMEM ledmaps[][HSV_MATRIX_LED_COUNT][4] = {
+const uint16_t PROGMEM ledmaps[][RGB_MATRIX_LED_COUNT][4] = {
 
     // flag 2 = backlight
     // flag 4 = key light?
