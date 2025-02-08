@@ -1,29 +1,29 @@
 #include QMK_KEYBOARD_H
 #include "layer_names.h"
 
-extern rgb_config_t rgb_matrix_config;
+extern HSV_config_t HSV_matrix_config;
 
-#define ____    RGB_OFF
-#define AZUR    RGB_AZURE
-#define BLUE    RGB_BLUE
-#define CHAT    RGB_CHARTREUSE
-#define CORL    RGB_CORAL
-#define CYAN    RGB_CYAN
-#define GOLD    RGB_GOLD
-#define GOLR    RGB_GOLDENROD
-#define GREN    RGB_GREEN
-#define MAGN    RGB_MAGENTA
-#define ORAG    RGB_ORANGE
-#define PINK    RGB_PINK
-#define PURP    RGB_PURPLE
-#define REDD    RGB_RED
-#define SREN    RGB_SPRINGGREEN
-#define TEAL    RGB_TEAL
-#define TURQ    RGB_TURQUOISE
-#define WITE    RGB_WHITE
-#define YELW    RGB_YELLOW
+#define ____    HSV_OFF
+#define AZUR    HSV_AZURE
+#define BLUE    HSV_BLUE
+#define CHAT    HSV_CHARTREUSE
+#define CORL    HSV_CORAL
+#define CYAN    HSV_CYAN
+#define GOLD    HSV_GOLD
+#define GOLR    HSV_GOLDENROD
+#define GREN    HSV_GREEN
+#define MAGN    HSV_MAGENTA
+#define ORAG    HSV_ORANGE
+#define PINK    HSV_PINK
+#define PURP    HSV_PURPLE
+#define REDD    HSV_RED
+#define SREN    HSV_SPRINGGREEN
+#define TEAL    HSV_TEAL
+#define TURQ    HSV_TURQUOISE
+#define WITE    HSV_WHITE
+#define YELW    HSV_YELLOW
 
-const uint16_t PROGMEM ledmaps[][RGB_MATRIX_LED_COUNT][4] = {
+const uint16_t PROGMEM ledmaps[][HSV_MATRIX_LED_COUNT][4] = {
 
     // flag 2 = backlight
     // flag 4 = key light?
@@ -85,53 +85,43 @@ const uint16_t PROGMEM ledmaps[][RGB_MATRIX_LED_COUNT][4] = {
 
 };
 
-// uint16_t* find_value_by_index(int layer, int index) {
-//     uint16_t* array = malloc(sizeof(uint16_t) * 4);
-
-//     for (int i = 0; i < RGB_MATRIX_LED_COUNT; i ++) {
-//         if (pgm_read_byte(&ledmaps[layer][i][0]) == index) {
-//             for (int j = 0; j<4; j++) {
-//                 array[j] = pgm_read_byte(&ledmaps[layer][i][j]);
-//             }
-//             break;
-//         }
-//     }
-//     return array;
-// }
-
 uint16_t* find_value_by_index(int layer, int index) {
-    static uint16_t array[4];  // Use static array to avoid memory allocation issues
+    uint16_t* array = malloc(sizeof(uint16_t) * 4);
 
     for (int i = 0; i < RGB_MATRIX_LED_COUNT; i++) {
-        if (pgm_read_word(&ledmaps[layer][i][0]) == index) {  // Use pgm_read_word
+        if (pgm_read_byte(&ledmaps[layer][i][0]) == index) {
             for (int j = 0; j < 4; j++) {
-                array[j] = pgm_read_word(&ledmaps[layer][i][j]);  // Read as word
+                array[j] = pgm_read_byte(&ledmaps[layer][i][j]);
             }
-            return array;
+            break;
         }
     }
-    return NULL;  // Return NULL if index not found
+    return array;
 }
-
-// void set_layer_color(int layer) {
-//     for(int i = 0; i < RGB_MATRIX_LED_COUNT; i++) {
-//         uint16_t* ledmap_value = find_value_by_index(layer, i);
-//         rgb_matrix_set_color(i, ledmap_value[1], ledmap_value[2], ledmap_value[3]);
-
-//         free(ledmap_value);
-//     }
-// }
 
 void set_layer_color(int layer) {
-    for(int i = 0; i < RGB_MATRIX_LED_COUNT; i++) {
-        uint16_t* ledmap_value = find_value_by_index(layer, i);
-        if (ledmap_value) {  // Check for NULL
-            rgb_matrix_set_color(i, ledmap_value[1], ledmap_value[2], ledmap_value[3]);
-        }
+  for (int i = 0; i < RGB_MATRIX_LED_COUNT; i++) {
+    uint16_t* ledmap_value = find_value_by_index(layer, i);
+
+    HSV hsv = {
+        .h = ledmap_value[1],
+        .s = ledmap_value[2],
+        .v = ledmap_value[3],
+    };
+
+    if (!hsv.h && !hsv.s && !hsv.v) {
+        rgb_matrix_set_color( i, 0, 0, 0 );
+    } else {
+        RGB rgb = hsv_to_rgb( hsv );
+        float f = (float)rgb_matrix_config.hsv.v / UINT8_MAX;
+        rgb_matrix_set_color( i, f * rgb.r, f * rgb.g, f * rgb.b );
     }
+
+    free(ledmap_value);
+  }
 }
 
-bool rgb_matrix_indicators_user(void) {
+bool HSV_matrix_indicators_user(void) {
     switch(get_highest_layer(layer_state)) {
         case _DEFAULT:
             set_layer_color(0);
@@ -143,7 +133,7 @@ bool rgb_matrix_indicators_user(void) {
             set_layer_color(2);
             break;
         default:
-            rgb_matrix_set_color_all(0, 0, 0);
+            HSV_matrix_set_color_all(____);
     }
     return true;
 }
